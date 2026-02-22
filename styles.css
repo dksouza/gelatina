@@ -113,13 +113,51 @@ body {
 }
 
 .video-container iframe,
-.video-container video {
+.video-container video,
+.video-container vturb-smartplayer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* Viewer Count */
+.viewer-count {
+    margin-top: 1.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 500;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.viewer-count strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
 }
 
 /* Smooth Entrance Micro-animations */
